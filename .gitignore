@@ -2,6 +2,12 @@
 **/build
 **/.cache
 
+**/.vscode
+**/.embuild
+**/.cargo
+**/target
+**/Cargo.lock
+
 # Server
 .vercel
 *.pyc
