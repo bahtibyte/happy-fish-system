@@ -1,1 +1,8 @@
-# happy-fish-system
+# Happy Fish System
+
+## Client
+```
+cd client
+npm install
+npm run dev
+```
