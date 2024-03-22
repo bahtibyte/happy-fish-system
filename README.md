@@ -15,8 +15,8 @@ idf.py monitor
 ```
 get_esprs
 cargo build
-cargo espflash flash ~/happy-fish-system/applications/esp32/rs/target/xtensa-esp32-espidf/debug/rs
-cargo espflash monitor
+espflash flash ~/happy-fish-system/applications/esp32/rs/target/xtensa-esp32-espidf/debug/rs
+espflash monitor
 ```
 
 ## Client

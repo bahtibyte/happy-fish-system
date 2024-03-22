@@ -4,9 +4,9 @@
 
 **/.vscode
 **/.embuild
-**/.cargo
 **/target
 **/Cargo.lock
+**/cfg.toml
 
 # Server
 .vercel
