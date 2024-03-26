@@ -8,6 +8,9 @@
 **/Cargo.lock
 **/cfg.toml
 
+**/.pio
+**/.vscode/*
+
 # Server
 .vercel
 *.pyc
