@@ -1,0 +1,28 @@
+.card {
+  background-color: #394257;
+  border-radius: 8px;
+  width: 385px;
+  height: 280px;
+  position: relative;
+}
+
+.title {
+  font-size: 1.0rem;
+  color: #F1F1F1;
+  position: absolute;
+  top: 10%;
+  left: 8%;
+}
+
+.value {
+  font-size: 1.7rem;
+  color: #F1F1F1;
+  position: absolute;
+  top: 18%;
+  left: 8%;
+}
+
+.units {
+  font-size: 1.2rem;
+  color: #A7A7A7;
+}

@@ -1,0 +1,28 @@
+h1 {
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  font-size: 1.3em;
+  color: #C1C1C1;
+} 
+
+.clock {
+  position: absolute;
+  top: 7%;
+  right: 4%;
+  font-size: 1em;
+  font-weight: bold;
+  color: #C1C1C1;
+}
+
+.profile {
+  position: absolute;
+  top: 12%;
+  right: 4%;
+}
+
+.toggle {
+  position: absolute;
+  top: 13.5%;
+  left: 4%;
+}

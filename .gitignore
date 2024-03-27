@@ -32,10 +32,11 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Client
-node_modules
-dist
-dist-ssr
-*.local
+**/node_modules
+**/dist
+**/dist-ssr
+**/*.local
+**/package-lock.json
 
 # Editor directories and files
 .vscode/*

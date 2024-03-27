@@ -1,0 +1,28 @@
+.dashboard-button {
+  padding: 10px 22px;
+  background-color: #394257;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: pointer;
+}
+
+.controls-button {
+  padding: 10px 27px;
+  background-color: #394257;
+  border: none;
+  color: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  cursor: pointer;
+}
+
+.dashboard-button.active,
+.controls-button.active {
+  border: 1.8px solid white;
+}
