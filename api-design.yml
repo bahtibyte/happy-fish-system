@@ -1,0 +1,108 @@
+openapi: '3.0.2'
+info:
+  title: Happy Fish System
+  description: This is the HappyFish server that communicates with the RaspberryPi. The server hosts the dashboard to allow customers to configure the hardware virtually.
+  version: 2.0.0
+servers:
+  - url: https://happyfishserver.vercel.com/api
+
+tags:
+  - name: pwm
+    description: Initial step to recognize hardware
+  - name: racks
+    description: Framework holding all the shelves
+  - name: shelves
+    description: Individual shelf controlling lights
+  - name: api
+    description: Endpoints to interact with shelves
+
+paths:
+  /test:
+    get:
+      responses:
+        '200':
+          description: OK
+
+components:
+  schemas:
+    ObjectId:
+      type: string
+    Config:
+      type: object
+      properties:
+        system-name:
+          type: string
+          example: "Happy Fish - QC Labs"
+        i/o:
+          type: object
+          properties:
+            i2c:
+              type: array
+              items:
+                $ref: "#/components/schemas/ObjectId"
+            gpio:
+              type: array
+              items:
+                $ref: "#/components/schemas/ObjectId"
+    GPIO:
+      type: object
+      properties:
+        _id:
+          $ref: "#/components/schemas/ObjectId"
+    PCA99685:
+      type: object
+      properties:
+        _id:
+          $ref: "#/components/schemas/ObjectId"
+        name:
+          type: string
+          example: "rgb pwm module"
+        kind:
+          type: string
+          example: "PCA99685"
+        address:
+          type: string
+          example: "0x40"
+        output:
+          type: object
+          properties:
+            a0:
+              $ref: "#/components/schemas/ObjectId"
+            a1:
+              $ref: "#/components/schemas/ObjectId"
+            a2:
+              $ref: "#/components/schemas/ObjectId"
+            a3:
+              $ref: "#/components/schemas/ObjectId"
+            a4:
+              $ref: "#/components/schemas/ObjectId"
+            a5:
+              $ref: "#/components/schemas/ObjectId"
+            a6:
+              $ref: "#/components/schemas/ObjectId"
+            a7:
+              $ref: "#/components/schemas/ObjectId"
+            a8:
+              $ref: "#/components/schemas/ObjectId"
+            a9:
+              $ref: "#/components/schemas/ObjectId"
+            a10:
+              $ref: "#/components/schemas/ObjectId"
+            a11:
+              $ref: "#/components/schemas/ObjectId"
+            a12:
+              $ref: "#/components/schemas/ObjectId"
+            a13:
+              $ref: "#/components/schemas/ObjectId"
+            a14:
+              $ref: "#/components/schemas/ObjectId"
+            a15:
+              $ref: "#/components/schemas/ObjectId"
+
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string

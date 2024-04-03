@@ -1,0 +1,11 @@
+{
+  "system": "Happy Fish - QC Bio Lab",
+  "io": {
+    "i2c": {
+
+    },
+    "gpio": {
+      
+    }
+  }
+}
