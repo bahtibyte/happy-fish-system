@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from './firebase'
+import { auth, onAuthChange } from './firebase'
 import Login from './components/login'
-import HappyFish from './happy_fish'
+import HappyFish from './happyfish'
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    onAuthChange(auth, (user) => {
+      setUser(user);
       setLoading(false);
-      setUser(user)
     });
   }, []);
 

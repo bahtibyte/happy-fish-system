@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { getFirestore, doc, onSnapshot } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -14,5 +15,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app)
 
-export { auth }
+// Renaming firebase apis.
+const signIn = signInWithEmailAndPassword;
+const onAuthChange = onAuthStateChanged;
+const onDocUpdate = onSnapshot;
+
+export { auth, signIn, signOut, onAuthChange, db, doc, onDocUpdate }

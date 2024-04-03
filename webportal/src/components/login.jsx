@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase'
+import { auth, signIn } from '../firebase'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,8 +10,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      // Login successful, you can redirect or update state here
+      await signIn(auth, email, password);
     } catch (error) {
       setErrorMessage(error.message);
     }
