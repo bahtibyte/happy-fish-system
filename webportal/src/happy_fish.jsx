@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './App.css'
 import Dashboard from './components/dashboard'
 import Heading from './components/heading'
+import './css/app.css'
 
-function App() {
+function HappyFish() {
   const [showDashboard, setShowDashboard] = useState(true);
 
   const handleTabClick = (tab) => {
@@ -15,13 +15,11 @@ function App() {
   };
 
   return (
-    <>
-      <div>
-        <Heading onTabClick={handleTabClick} />
-        {showDashboard && <Dashboard />}
-      </div>
-    </>
+    <div>
+      <Heading onTabClick={handleTabClick} />
+      {showDashboard && <Dashboard />}
+    </div>
   )
 }
 
-export default App
+export default HappyFish;
