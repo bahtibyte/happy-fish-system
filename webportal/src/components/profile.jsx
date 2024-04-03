@@ -1,4 +1,3 @@
-import React from 'react';
 import '../css/profile.css';
 
 function Profile({ avatar, onClick }) {

@@ -1,13 +1,18 @@
-import Clock from "./clock"
 import '../css/heading.css'
 import Profile from "./profile"
 import avatarImage from '../assets/pfp.png'
-import Toggle from "./toggle";
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase'
 
-function Heading({ onTabClick }) {
+function Heading() {
 
-  const handleProfileClick = () => {
-    // Handle profile button click event
+  const handleProfileClick = async () => {
+    try {
+      await signOut(auth);
+      // Logout successful, you can redirect or update state here
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
   };
 
   return (
@@ -15,9 +20,7 @@ function Heading({ onTabClick }) {
       <h1>
         Happy Fish - QC Bio Lab
       </h1>
-      <Clock />
       <Profile avatar={avatarImage} onClick={handleProfileClick} />
-      <Toggle onTabClick={onTabClick} />
     </div>
   )
 }

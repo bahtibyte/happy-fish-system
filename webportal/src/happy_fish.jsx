@@ -1,23 +1,23 @@
 import { useState } from 'react';
-import Dashboard from './components/dashboard'
-import Heading from './components/heading'
-import './css/app.css'
+import { signOut } from 'firebase/auth';
+import { auth } from './firebase'
 
 function HappyFish() {
-  const [showDashboard, setShowDashboard] = useState(true);
+  const [count, setCount] = useState(0);
 
-  const handleTabClick = (tab) => {
-    if (tab === "dashboard") {
-      setShowDashboard(true);
-    } else if (tab === "controls") {
-      setShowDashboard(false);
-    }
+  const handleIncrement = () => {
+    setCount(count + 1);
   };
+
+  const handleSignOut = async () => {
+    await signOut(auth);
+  }
 
   return (
     <div>
-      <Heading onTabClick={handleTabClick} />
-      {showDashboard && <Dashboard />}
+      <p>count is {count}</p>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleSignOut}>Sign Out</button>
     </div>
   )
 }
