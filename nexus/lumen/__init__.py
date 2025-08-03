@@ -1,0 +1,1 @@
+# Pico module responsible for lighting control.

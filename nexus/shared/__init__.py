@@ -1,0 +1,1 @@
+# Shared types and config schemas used across all hardware modules.

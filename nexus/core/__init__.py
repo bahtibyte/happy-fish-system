@@ -1,0 +1,1 @@
+# Core Raspberry Pi module that connects to server and coordinates other devices.
